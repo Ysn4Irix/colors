@@ -1,0 +1,153 @@
+:root {
+  --primary: #d81e5d;
+  --secondary: #8a4fff;
+  --dark: #27253d;
+  --light: #e7dfd5;
+  --brown: #686354;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  font-family: 'Fresca', sans-serif;
+}
+
+body {
+  background-color: var(--light);
+}
+
+main {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: var(--dark);
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  margin-bottom: 1rem;
+}
+
+.text {
+  color: var(--brown);
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* CSS */
+.generator-button {
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: var(--dark);
+  border-radius: 12px;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(
+    45deg,
+    #ff512f 0%,
+    #f09819 51%,
+    #ff512f 100%
+  );
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.generator-button:hover {
+  background-position: right center;
+  color: var(--light);
+  text-decoration: none;
+}
+
+.generator-button:active {
+  transform: scale(0.95);
+}
+
+.colors {
+  display: flex;
+  flex-direction: column;
+}
+
+.color {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+  color: #fff;
+  height: 50vh;
+  border-radius: 1rem;
+  transition: 0.4s ease-out;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+button,
+input {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+button {
+  user-select: none;
+  cursor: pointer;
+}
+
+.lock-toggle {
+  opacity: 0.5;
+  transition: 0.4s linear;
+}
+
+.lock-toggle.is-locked {
+  opacity: 1;
+}
+
+.color-input {
+  text-align: center;
+  color: var(--light);
+  font-size: 2rem;
+}
+
+@media (min-width: 100px) {
+  .color {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+  .color-input {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .color {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .color-input {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
